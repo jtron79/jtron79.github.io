@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Dark Template</title>
+    <!-- Google Fonts for "Inter" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- External CSS link -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+     <link rel="stylesheet" href="main.css">
+    <!-- External JS link -->
+    <script src="main.js" defer></script>
+</head>
+<body> 
+
+    <!-- Navigation -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="smalllogo3.png" class="logo" alt="Jason Lamb Logo" id="name">
+            </a>
+            <div class="nav-tabs" id="nav-tabs">
+                <a href="#hero" class="nav-tab active-tab">Home</a>
+                <a href="#about" class="nav-tab">About</a>
+                <a href="#projects" class="nav-tab">Projects</a>
+                <a href="#contact" class="nav-tab">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container py-5 clearfix">
+        <h1>Jason Lamb</h1>
+        <img src="smalllogo.png" alt="Jason Lamb's logo" class="img-fluid hero-logo-float">
+
+        
+        <p class="lead">A highly accomplished Full Stack Engineer with a unique foundation in real-world engineering, including vast experience building and maintaining public infrastructure...</p>
+       <a href="#projects" class="btn btn-primary btn-lg mt-3 nav-tab">View My Work</a>
+        
+    </div>
+</section>
+    <!-- About Me Section -->
+    <section id="about" class="hidden">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="https://placehold.co/300x300/4a90e2/ffffff?text=Your+Photo" alt="Your Photo">
+                <div class="text-content">
+                    <p>Hello! I'm Jason Lamb, a Full Stack Engineer with a story forged in resilience and a diverse skill set built from the ground up. Growing up in an underprivileged home in Eastern Oregon, I learned early on that if you want something, you build it yourself. That mindset has been the foundation of my entire career, from bootstrapping my skills to running my own IT consulting business.</p>
+
+<p>My professional journey is unique, bridging the gap between the digital and the physical. With over 20 years in IT, my expertise lies in software development and systems integration, but my hands-on experience runs deeper—I’m also a skilled welder and fabricator. This blend of disciplines, from shaping steel to architecting code, gives me a grounded, systems-level perspective that few can claim.
+
+This practical foundation is backed by key certifications in both information technology (CompTIA Network+, Azure AZ-900) and public works (Hazmat Technician, Oregon DEQ). It has enabled me to lead technical teams, implement agile frameworks, and ensure the reliability of critical systems with meticulous attention to detail.</p>
+
+<p>My passion for building extends beyond my career into hobbies like CNC machining and vehicle modification. When I'm not engineering a solution, I'm likely backpacking, traveling, and capturing the world through a camera lens—a constant reminder of how far a journey of self-reliance can take you.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+ section id="projects" class="pt-5 bg-dark text-light">
+    
+    <!-- CONTAINER 1: Wraps the Project Cards Grid -->
+    <div class="container">
+        
+        <!-- Project Cards Title -->
+        <h2 class="mb-5 text-center">Impact Projects & Architecture</h2>
+        
+        <!-- Project Cards Grid (All 3 cards included) -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 proj-marg"> 
+            
+            <!-- Card 1: Performance Overhaul -->
+            <div class="col">
+                <div class="card h-100 shadow bg-black text-white border-0">
+                    <img src="path/to/performance_graphic.jpg" class="card-img-top" alt="Database Performance Graphic">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title text-center text-success fs-5">🚀 50% Performance Overhaul</h3>
+                        <p class="card-text text-center text-light">Re-architected legacy SQL Server systems for 1,000+ users, **eliminating major bottlenecks** and **boosting app speed by half.**</p>
+                        <div class="text-center mt-2 mb-3">
+                            <span class="badge bg-primary me-1">SQL Server</span>
+                            <span class="badge bg-secondary me-1">System Integration</span>
+                            <span class="badge bg-info me-1">Database Migration</span>
+                        </div>
+                        <div class="mt-auto d-grid">
+                            <button type="button" class="btn btn-dark border border-white" 
+                                data-bs-toggle="modal" data-bs-target="#modal-performance">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2: Automation & Security -->
+            <div class="col">
+                <div class="card h-100 shadow bg-black text-white border-0">
+                    <img src="path/to/automation_script.jpg" class="card-img-top" alt="Automation Script Flowchart">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title text-center text-warning fs-5">⏱️ Automated Security Patching</h3>
+                        <p class="card-text text-center text-light">Developed proprietary **AutoIT scripts** to automate critical software updates, **reclaiming X hours/week** and plugging security gaps.</p>
+                        <div class="text-center mt-2 mb-3">
+                            <span class="badge bg-primary me-1">Automation (AutoIT)</span>
+                            <span class="badge bg-secondary me-1">Process Improvement</span>
+                            <span class="badge bg-info me-1">Security</span>
+                        </div>
+                        <div class="mt-auto d-grid">
+                            <button type="button" class="btn btn-dark border border-white" 
+                                data-bs-toggle="modal" data-bs-target="#modal-automation">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: GIS Integration -->
+            <div class="col">
+                <div class="card h-100 shadow bg-black text-white border-0">
+                    <img src="path/to/gis_map.jpg" class="card-img-top" alt="GIS Map">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title text-center text-info fs-5">🗺️ GIS Data Model Transformation</h3>
+                        <p class="card-text text-center text-light">Engineered a **Python script** to transform complex data, enabling **first-time infrastructure mapping** for Public Works.</p>
+                        <div class="text-center mt-2 mb-3">
+                            <span class="badge bg-primary me-1">Python</span>
+                            <span class="badge bg-secondary me-1">Data Modeling</span>
+                            <span class="badge bg-info me-1">POSTGIS/GIS</span>
+                        </div>
+                        <div class="mt-auto d-grid">
+                            <button type="button" class="btn btn-dark border border-white" 
+                                data-bs-toggle="modal" data-bs-target="#modal-gis">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- End Project Cards Grid -->
+        
+        <!-- Horizontal divider separating cards from skills anchor -->
+        <hr class="mt-5 mb-0 border-secondary"> 
+    </div>
+    <!-- END CONTAINER 1 -->
+
+
+    <!-- START SKILLS SECTION: FULL-WIDTH ANCHOR -->
+    <!-- Applies border and subtle background across the full width of the screen -->
+    <div class="border-top border-secondary border-4 bg-dark-subtle py-4"> 
+        
+        <!-- CONTAINER 2: Wraps skills content for horizontal alignment -->
+        <div class="container"> 
+            
+            <h2 class="mb-4 text-center text-white">Core Technical Skills</h2>
+            
+            <!-- Skills List Grid -->
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center text-center">
+                
+                <div class="col"><span class="badge bg-primary fs-6 py-2 px-3 w-100">C# / ASP.NET</span></div>
+                <div class="col"><span class="badge bg-success fs-6 py-2 px-3 w-100">SQL Server</span></div>
+                <div class="col"><span class="badge bg-info fs-6 py-2 px-3 w-100">JavaScript</span></div>
+                <div class="col"><span class="badge bg-danger fs-6 py-2 px-3 w-100">Full-Stack Development</span></div>
+                <div class="col"><span class="badge bg-warning text-dark fs-6 py-2 px-3 w-100">Data Integrity</span></div>
+                <div class="col"><span class="badge bg-secondary fs-6 py-2 px-3 w-100">Git</span></div>
+                <div class="col"><span class="badge bg-info fs-6 py-2 px-3 w-100">IT Infrastructure Management</span></div>
+                <div class="col"><span class="badge bg-primary fs-6 py-2 px-3 w-100">API Integration</span></div>
+                <div class="col"><span class="badge bg-success fs-6 py-2 px-3 w-100">Troubleshooting Complex Systems</span></div>
+                <div class="col"><span class="badge bg-danger fs-6 py-2 px-3 w-100">Microsoft Azure Fundamentals</span></div>
+                <div class="col"><span class="badge bg-warning text-dark fs-6 py-2 px-3 w-100">SCRUM Framework</span></div>
+                <div class="col"><span class="badge bg-secondary fs-6 py-2 px-3 w-100">Project Management</span></div>
+                <div class="col"><span class="badge bg-info fs-6 py-2 px-3 w-100">Team Leadership</span></div>
+                
+            </div>
+            
+        </div>
+        <!-- END CONTAINER 2 -->
+    </div>
+    <!-- END SKILLS SECTION: FULL-WIDTH ANCHOR -->
+</section>
+    <!-- Footer (Contact Section) -->
+    <footer id="contact" class="hidden">
+        <div class="container">
+            <p>&copy; 2023 Jason Lamb. All rights reserved.</p>
+        </div>
+    </footer>
+<!--Modal content-->
+<div class="modal fade" id="modal-performance" tabindex="-1" aria-labelledby="performanceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content bg-dark text-light border border-secondary shadow-lg"> 
+            
+            <div class="modal-header bg-black text-white border-bottom border-secondary">
+                <h5 class="modal-title" id="performanceModalLabel"><span class="text-success">🚀</span> 50% Application Performance Overhaul</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body p-4 bg-dark"> 
+                
+                <div class="text-center p-3 mb-4 rounded border border-success bg-secondary-darker"> 
+                    <h1 class="display-5 fw-bold text-success">Achieved a 50% Boost</h1>
+                    <p class="lead text-light">Application Performance Improvement for a Public Sector System.</p>
+                    <hr class="my-3 border-light opacity-25"> 
+                    <span class="badge bg-primary me-2">SQL Server</span>
+                    <span class="badge bg-secondary me-2">Database Migration</span>
+                    <span class="badge bg-info">System Integration</span>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <h4 class="text-danger border-bottom border-danger pb-2">The Problem</h4>
+                        <ul class="list-unstyled text-light">
+                            <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Critical bottlenecks causing 30-second query waits during peak reporting times.</li>
+                            <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Legacy indexing strategy resulting in unsustainable high I/O and CPU utilization.</li>
+                            <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Risk of data integrity failures due to poor system load handling.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-primary border-bottom border-primary pb-2">The Solution</h4>
+                        <p class="text-light">A multi-phase database and application re-architecture focusing on deep-level performance tuning, index optimization, and **data flow modeling** to ensure robust, scalable access for over 1,000 public users.</p>
+                    </div>
+                </div>
+                
+                <h3 class="mb-3 text-white">The Process: Deep Dive into Re-Architecture</h3>
+                <div class="accordion" id="processAccordionModal">
+                    
+                    <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                        <h2 class="accordion-header" id="headingOneModal">
+                            <button class="accordion-button bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneModal" aria-expanded="true" aria-controls="collapseOneModal">
+                                Phase 1: Performance Profiling and Baseline (The Discovery)
+                            </button>
+                        </h2>
+                        <div id="collapseOneModal" class="accordion-collapse collapse show" aria-labelledby="headingOneModal" data-bs-parent="#processAccordionModal">
+                            <div class="accordion-body bg-dark text-light">
+                                <p>We used **SQL Server Profiler** and **Query Store** to identify the top 10 most resource-intensive stored procedures. The analysis showed that $85\%$ of the load was caused by two critical reporting joins with high I/O waits.</p>
+                                <h6 class="mt-3 text-white">Code Proof: Example of Costly Join</h6>
+                                <pre><code class="language-sql bg-black p-2 rounded d-block text-white">-- Original, non-indexed query taking >15 seconds
+SELECT * FROM Users u JOIN Orders o ON u.UserID = o.UserID; 
+-- Execution cost: 85% Table Scan on Orders table</code></pre>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                        <h2 class="accordion-header" id="headingTwoModal">
+                            <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoModal" aria-expanded="false" aria-controls="collapseTwoModal">
+                                Phase 2: Data Modeling and Index Optimization (The Fix)
+                            </button>
+                        </h2>
+                        <div id="collapseTwoModal" class="accordion-collapse collapse" aria-labelledby="headingTwoModal" data-bs-parent="#processAccordionModal">
+                            <div class="accordion-body bg-dark text-light">
+                                <p>We implemented a revised indexing strategy, prioritizing **Clustered Columnstore Indexes** on large, fact-based tables to improve I/O efficiency. We also refactored the two identified bottleneck queries, replacing subqueries with highly-optimized Common Table Expressions (CTEs).</p>
+                                <h6 class="mt-3 text-white">Visual Proof: Before vs. After Execution Plan</h6>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                        <h2 class="accordion-header" id="headingThreeModal">
+                            <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeModal" aria-expanded="false" aria-controls="collapseThreeModal">
+                                Phase 3: UAT, Deployment, and Security
+                            </button>
+                        </h2>
+                        <div id="collapseThreeModal" class="accordion-collapse collapse" aria-labelledby="headingThreeModal" data-bs-parent="#processAccordionModal">
+                            <div class="accordion-body bg-dark text-light">
+                                <p>The solution was deployed in a staging environment for User Acceptance Testing (UAT) with 50 concurrent users. We also audited the new database connections to ensure compliance with HIPAA security standards, specifically focusing on **encryption-in-transit** protocols.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> 
+                
+                <h3 class="mt-5 mb-4 text-white">Quantifiable Results</h3>
+                <div class="row text-center text-light">
+                    <div class="col-md-4 mb-3">
+                        <i class="bi bi-speedometer2 display-4 text-success"></i>
+                        <h3 class="mt-2 text-success">+50%</h3>
+                        <p class="text-light">Faster Application Performance</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <i class="bi bi-cpu display-4 text-primary"></i>
+                        <h3 class="mt-2 text-primary">-20%</h3>
+                        <p class="text-light">Reduction in Server CPU Utilization</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <i class="bi bi-graph-up display-4 text-info"></i> 
+                        <h3 class="mt-2 text-info">0</h3>
+                        <p class="text-light">High-Priority Data Integrity Alerts Post-Deployment</p>
+                    </div>
+                </div>
+                
+                <h3 class="mt-5 mb-3 text-white">Key Takeaway</h3>
+                <p class="alert alert-dark border-secondary text-white shadow-lg">The biggest lesson was the value of focusing on **clustered index architecture** before looking at costly hardware upgrades. Smart re-architecture negated the need for a $\mathbf{\$10,000}$ server purchase, proving that database design is the first line of defense against latency.</p>
+
+            </div>
+            
+            <div class="modal-footer bg-black border-top border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Case Study</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modal-automation" tabindex="-1" aria-labelledby="automationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content bg-dark text-light border border-secondary shadow-lg">
+            
+            <div class="modal-header bg-black text-white border-bottom border-secondary">
+                <h5 class="modal-title" id="automationModalLabel"><span class="text-warning">⏱️</span> Automated Security Patching</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body p-4 bg-dark">
+                
+                <div class="text-center p-3 mb-4 rounded border border-warning bg-secondary-darker"> 
+                    <h1 class="display-5 fw-bold text-warning">Reclaimed Team Hours</h1>
+                    <p class="lead text-light">Developed automated scripts to eliminate manual software updates and plug a critical security gateway.</p>
+                    <hr class="my-3 border-light opacity-25"> 
+                    <span class="badge bg-primary me-2">Automation (AutoIT)</span>
+                    <span class="badge bg-secondary me-2">Process Improvement</span>
+                    <span class="badge bg-info">Security</span>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <h4 class="text-danger border-bottom border-danger pb-2">The Problem</h4>
+                        <ul class="list-unstyled text-light">
+                            <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Manual updates (Adobe, Java) consumed **10+ hours per week** of high-level IT staff time.</li>
+                            <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Update delays left endpoints vulnerable to common exploits.</li>
+                            <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Inconsistent patching led to compliance and audit risks.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-primary border-bottom border-primary pb-2">The Solution</h4>
+                        <p class="text-light">Developed an **AutoIT scripting program** paired with a central control file to automate the download, validation, and installation of critical third-party software across all systems, ensuring rapid and consistent security coverage.</p>
+                    </div>
+                </div>
+                
+                <h3 class="mb-3 text-white">The Process: Scripting and Implementation</h3>
+                <div class="accordion" id="automationAccordionModal">
+                    
+                    <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                        <h2 class="accordion-header" id="autoHeadingOne">
+                            <button class="accordion-button bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#autoCollapseOne" aria-expanded="true" aria-controls="autoCollapseOne">
+                                Phase 1: Developing the AutoIT Validation Program
+                            </button>
+                        </h2>
+                        <div id="autoCollapseOne" class="accordion-collapse collapse show" aria-labelledby="autoHeadingOne" data-bs-parent="#automationAccordionModal">
+                            <div class="accordion-body bg-dark text-light">
+                                <p>The core program used AutoIT to interact with Windows processes and GUIs. It read a network-shared **INI file** to determine which software needed updating and the required version, providing a centralized control point for the deployment team.</p>
+                                <h6 class="mt-3 text-white">Proof: Example INI Configuration</h6>
+                                <pre><code class="language-ini bg-black p-2 rounded d-block text-white">
+[Adobe_Reader]
+Version=2024.002.20698
+DownloadURL=//server/patches/Adobe.exe
+Checksum=A2C3F4D5E6
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                        <h2 class="accordion-header" id="autoHeadingTwo">
+                            <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#autoCollapseTwo" aria-expanded="false" aria-controls="autoCollapseTwo">
+                                Phase 2: Secure Deployment and Logging
+                            </button>
+                        </h2>
+                        <div id="autoCollapseTwo" class="accordion-collapse collapse" aria-labelledby="autoHeadingTwo" data-bs-parent="#automationAccordionModal">
+                            <div class="accordion-body bg-dark text-light">
+                                <p>The script included logic to verify the installer **checksum** against the INI file before execution, ensuring the integrity of the patch. The process logged success or failure to a central database, providing real-time auditability for all patched endpoints.</p>
+                                <p>This strategy secured the deployment pipeline and eliminated the human error inherent in manual patching.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <h3 class="mt-5 mb-4 text-white">Quantifiable Results</h3>
+                <div class="row text-center text-light">
+                    <div class="col-md-4 mb-3">
+                        <i class="bi bi-clock-history display-4 text-warning"></i>
+                        <h3 class="mt-2 text-warning">~40 Hrs/Mo</h3>
+                        <p class="text-light">IT Staff Time Reclaimed from Manual Patching</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <i class="bi bi-shield-lock-fill display-4 text-success"></i>
+                        <h3 class="mt-2 text-success">100%</h3>
+                        <p class="text-light">Endpoint Compliance with Latest Patches</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <i class="bi bi-code-square display-4 text-info"></i>
+                        <h3 class="mt-2 text-info">AutoIT</h3>
+                        <p class="text-light">Primary Technology Utilized</p>
+                    </div>
+                </div>
+                
+                <h3 class="mt-5 mb-3 text-white">Key Takeaway</h3>
+                <p class="alert border-secondary text-white shadow-lg" 
+                   style="background-color: #343a40 !important;">
+                    This project reinforced the principle that **automation is the single most effective security measure** for routine maintenance. By investing development time upfront, we not only plugged a critical exploit gateway but also gained an entire person-week of productivity every month.
+                </p>
+
+            </div>
+            
+            <div class="modal-footer bg-black border-top border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Case Study</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-gis" tabindex="-1" aria-labelledby="gisModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content bg-dark text-light border border-secondary shadow-lg">
+            
+            <div class="modal-header bg-black text-white border-bottom border-secondary">
+                <h5 class="modal-title" id="gisModalLabel"><span class="text-info">🗺️</span> GIS Data Model Transformation</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body p-4 bg-dark">
+                
+                <div class="text-center p-3 mb-4 rounded border border-info bg-secondary-darker"> 
+                    <h1 class="display-5 fw-bold text-info">First-Time Infrastructure Mapping</h1>
+                    <p class="lead text-light">Engineered a Python script to translate legacy tax data into a clean, spatial model for city infrastructure management.</p>
+                    <hr class="my-3 border-light opacity-25"> 
+                    <span class="badge bg-primary me-2">Python</span>
+                    <span class="badge bg-secondary me-2">Data Modeling</span>
+                    <span class="badge bg-info">POSTGIS/GIS</span>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <h4 class="text-danger border-bottom border-danger pb-2">The Problem</h4>
+                        <ul class="list-unstyled text-light">
+                            <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Public Works infrastructure assets (pipes, conduits) were **unmapped** and lacked spatial data.</li>
+                            <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Core reporting database had a complex **one-to-many relationship** for tax lots and addresses, unsuitable for GIS joining.</li>
+                            <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Legacy data architecture prevented efficient spatial querying and reporting.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-primary border-bottom border-primary pb-2">The Solution</h4>
+                        <p class="text-light">Developed a custom, external **Python script** to consume the multi-relation data set, restructure it into a simple **one-to-one logical model**, and integrate the cleaned data directly into the ArcGIS environment for mapping and asset management.</p>
+                    </div>
+                </div>
+                
+                <h3 class="mb-3 text-white">The Process: Data Restructuring and Integration</h3>
+                <div class="accordion" id="gisAccordionModal">
+                    
+                    <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                        <h2 class="accordion-header" id="gisHeadingOne">
+                            <button class="accordion-button bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#gisCollapseOne" aria-expanded="true" aria-controls="gisCollapseOne">
+                                Phase 1: Python Script for One-to-One Transformation
+                            </button>
+                        </h2>
+                        <div id="gisCollapseOne" class="accordion-collapse collapse show" aria-labelledby="gisHeadingOne" data-bs-parent="#gisAccordionModal">
+                            <div class="accordion-body bg-dark text-light">
+                                <p>The central task was translating relational data into a flat, spatial-friendly format. The **Python script** utilized database connectors (like `psycopg2` or `pyodbc`) to extract and merge related address records into a single row per tax lot, resolving the one-to-many conflict before ingestion.</p>
+                                <h6 class="mt-3 text-white">Code Concept: Core Data Merging Loop</h6>
+                                <pre><code class="language-python bg-black p-2 rounded d-block text-white">
+# Conceptual loop to merge multi-row addresses into one record
+for lot_id in unique_lots:
+    address_list = get_addresses_by_lot(lot_id)
+    merged_address = " / ".join(address_list)
+    update_gis_table(lot_id, merged_address)
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                        <h2 class="accordion-header" id="gisHeadingTwo">
+                            <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#gisCollapseTwo" aria-expanded="false" aria-controls="gisCollapseTwo">
+                                Phase 2: Integrating Data and Developing Custom Tools
+                            </button>
+                        </h2>
+                        <div id="gisCollapseTwo" class="accordion-collapse collapse" aria-labelledby="gisHeadingTwo" data-bs-parent="#gisAccordionModal">
+                            <div class="accordion-body bg-dark text-light">
+                                <p>The cleaned data was imported into ArcGIS, forming the foundation for the Public Works layer. This enabled the development of several **custom GIS tools** (written in Python/ArcPy) to automate labeling, feature selection, and reporting based on the newly available spatial data.</p>
+                                <p>This project successfully paved the way for the City of Newport to include all subsequent infrastructure management within their GIS framework.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <h3 class="mt-5 mb-4 text-white">Quantifiable Results</h3>
+                <div class="row text-center text-light">
+                    <div class="col-md-4 mb-3">
+                        <i class="bi bi-geo-alt-fill display-4 text-info"></i>
+                        <h3 class="mt-2 text-info">100%</h3>
+                        <p class="text-light">Critical Infrastructure Assets Mapped</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <i class="bi bi-file-earmark-code-fill display-4 text-primary"></i>
+                        <h3 class="mt-2 text-primary">Python</h3>
+                        <p class="text-light">Primary Transformation Tool</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <i class="bi bi-database-fill-check display-4 text-success"></i>
+                        <h3 class="mt-2 text-success">Clean</h3>
+                        <p class="text-light">One-to-One Data Relationship Achieved</p>
+                    </div>
+                </div>
+                
+                <h3 class="mt-5 mb-3 text-white">Key Takeaway</h3>
+                <p class="alert border-secondary text-white shadow-lg" 
+                   style="background-color: #343a40 !important;">
+                    This project proved that effective **data modeling and transformation** is the critical first step in leveraging powerful applications like GIS. Without the custom script to flatten the data, the entire infrastructure mapping initiative would have stalled at the integration phase.
+                </p>
+
+            </div>
+            
+            <div class="modal-footer bg-black border-top border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Case Study</button>
+            </div>
+        </div>
+    </div>
+</div>        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

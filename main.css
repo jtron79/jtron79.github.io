@@ -1,0 +1,290 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Custom scrollbar */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #374151;
+    border-radius: 20px;
+    border: 3px solid #1f2937;
+}
+
+.hidden {
+    display: none !important;
+}
+
+header {
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.logo {
+    height: 100px;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.nav-tab {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-tab:hover {
+    background-color: #333;
+}
+
+.active-tab {
+    background-color: #555;
+    font-weight: bold;
+}
+
+section {
+    padding: 5rem 1rem;
+    min-height: 100vh;
+}
+
+
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+}
+
+.about-content img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #1f1f1f;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skill-item {
+    background-color: #333;
+    color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #2b2b2b;
+    color: #f0f0f0;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #777;
+    margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+    .nav-tabs {
+        margin-top: 0;
+    }
+}
+
+/* This floats the logo to the left */
+.hero-logo-float {
+    float: left;
+    width: 200px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+
+/* This contains the float and fixes the layout for everything after it */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.hero .lead {
+    /* This establishes a new layout context, forcing the paragraph 
+       to respect the floated image and wrap correctly. */
+   
+     width: auto;
+}
+.hero {
+    /* Pushes the content down from under the nav bar */
+    /* Adjust this value to match your nav bar's height */
+    padding-top: 150px; 
+}
+.proj-marg {
+    
+    margin-top: 0 !important;
+
+}
+/* --- FIX 1: Ensure Accordion Item has a proper dark background and border --- */
+.accordion-item {
+    background-color: #1a1a1a !important; /* A very dark gray for subtle lift */
+    border-color: #343a40 !important;   /* Darker border color */
+}
+
+/* --- FIX 2: Correct the Header Button Background and Text Color --- */
+.accordion-button {
+    /* Set button background to a dark color */
+    background-color: #212529 !important; /* Darkest primary color */
+    color: #f8f9fa !important;          /* Light text for high contrast */
+    font-weight: 700 !important;        /* Keep the bold weight */
+}
+
+/* --- FIX 3: Fix the Hover State (Hovering makes them light by default) --- */
+.accordion-button:not(.collapsed) {
+    /* When open (not collapsed), keep the dark background */
+    background-color: #343a40 !important; 
+    color: #ffffff !important;           /* Pure white text when open */
+    box-shadow: none !important;
+    border-color: #343a40 !important;
+}
+
+/* --- FIX 4: Fix the Accordion Body Content --- */
+.accordion-body {
+    /* Ensure the body content area is dark and has light text */
+    background-color: #1a1a1a !important;
+    color: #ced4da !important;
+    border-top: 1px solid #343a40 !important;
+}
+
+/* --- FIX 5: Ensure the icon (arrow) is visible --- */
+.accordion-button:not(.collapsed)::after {
+    /* Filter to change the SVG icon color to white */
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.accordion-button::after {
+    /* Ensure the icon is white/light when collapsed as well */
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+.modal-body .alert {
+    /* Sets the background color to a known dark shade, overriding the Bootstrap default */
+    background-color: #343a40 !important; 
+    
+    /* Ensure the border color matches your dark theme */
+    border-color: #495057 !important; 
+    
+    /* Ensure text is visible */
+    color: #f8f9fa !important;
+}
