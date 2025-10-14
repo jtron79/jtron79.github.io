@@ -75,10 +75,33 @@ header {
 }
 
 section {
-    padding: 5rem 1rem;
+    /* Increased top padding to push content below the fixed header */
+    padding: 150px 1rem 5rem 1rem;
     min-height: 100vh;
 }
 
+/* 
+  Flexbox layout for the projects section.
+  This ensures the section fills the viewport and allows us to push the 
+  skills container to the bottom.
+*/
+/* Only apply flex display when the section is NOT hidden.
+   This prevents it from overriding the .hidden class from main.js */
+#projects:not(.hidden) {
+    /* Revert to a simple flex layout to push skills to the bottom */
+    display: flex !important;
+    flex-direction: column; 
+}
+
+/* 
+  This targets the first direct child of #projects (the container with the cards)
+  and tells it to grow, pushing the skills section to the bottom.
+*/
+#projects > .container {
+    flex-grow: 1;
+    padding-top: 15px;
+
+}
 
 
 .button {
@@ -287,4 +310,52 @@ footer {
     
     /* Ensure text is visible */
     color: #f8f9fa !important;
+}
+
+/* 
+  Fix for long text in skill badges.
+  - `white-space: normal;` allows text to wrap onto multiple lines.
+  - `word-break: break-word;` forces long words to break if they would otherwise overflow.
+*/
+#projects .badge {
+    white-space: normal;
+    word-break: break-word;
+    text-align: center; /* Ensures text remains centered after wrapping */
+}
+
+/*
+  Set a fixed height for project card images to ensure uniformity.
+  - `object-fit: cover;` prevents images from being stretched or distorted.
+*/
+#projects .card-img-top {
+    height: 45px;
+    object-fit: cover;
+}
+
+
+/*
+  Styles for the modal header when it has a background image.
+*/
+.modal-header {
+    position: relative; /* Required for the overlay */
+    background-size: cover;
+    background-position: center center;
+    padding-top: 4rem; /* Add more padding to showcase the image */
+    padding-bottom: 4rem;
+}
+
+/* Add a pseudo-element for the dark overlay to ensure text is readable */
+.modal-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)); /* Dark overlay */
+    z-index: 1; /* Place overlay below the text */
+}
+
+/* Ensure modal title and close button are on top of the overlay */
+.modal-header .modal-title,
+.modal-header .btn-close {
+    position: relative;
+    z-index: 2;
 }

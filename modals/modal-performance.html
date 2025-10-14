@@ -1,0 +1,107 @@
+<div class="modal-content bg-dark text-light border border-secondary shadow-lg"> 
+            
+    <div class="modal-header bg-black text-white border-bottom border-secondary">
+        <h5 class="modal-title" id="performanceModalLabel"><span class="text-success">🚀</span> 50% Application Performance Overhaul</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    <div class="modal-body p-4 bg-dark"> 
+        
+        <div class="text-center p-3 mb-4 rounded border border-success bg-secondary-darker"> 
+            <h1 class="display-5 fw-bold text-success">Achieved a 50% Boost</h1>
+            <p class="lead text-light">Application Performance Improvement for a Public Sector System.</p>
+            <hr class="my-3 border-light opacity-25"> 
+            <span class="badge bg-primary me-2">SQL Server</span>
+            <span class="badge bg-secondary me-2">Database Migration</span>
+            <span class="badge bg-info me-2">System Integration</span>
+            <span class="badge bg-danger">Full-Stack Development</span>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <h4 class="text-danger border-bottom border-danger pb-2">The Problem</h4>
+                <ul class="list-unstyled text-light">
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Critical bottlenecks causing 30-second query waits during peak reporting times.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Legacy indexing strategy resulting in unsustainable high I/O and CPU utilization.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Risk of data integrity failures due to poor system load handling.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-primary border-bottom border-primary pb-2">The Solution</h4>
+                <p class="text-light">A multi-phase database and application re-architecture focusing on deep-level performance tuning, index optimization, and data flow modeling to ensure robust, scalable access for over 1,000 public users.</p>
+            </div>
+        </div>
+        
+        <h3 class="mb-3 text-white">The Process: Deep Dive into Re-Architecture</h3>
+        <div class="accordion" id="processAccordionModal">
+            
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="headingOneModal">
+                    <button class="accordion-button bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneModal" aria-expanded="true" aria-controls="collapseOneModal">
+                        Phase 1: Performance Profiling and Baseline (The Discovery)
+                    </button>
+                </h2>
+                <div id="collapseOneModal" class="accordion-collapse collapse show" aria-labelledby="headingOneModal" data-bs-parent="#processAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>We used SQL Server Profiler and Query Store to identify the top 10 most resource-intensive stored procedures. The analysis showed that 85% of the load was caused by two critical reporting joins with high I/O waits.</p>
+                        <h6 class="mt-3 text-white">Code Proof: Example of Complex CTE for Scoring</h6>
+                        <pre><code class="language-sql bg-black p-2 rounded d-block text-white">
+-- Part of a larger CTE used to calculate pipe lifecycle scores
+-- This section was a major source of I/O bottlenecks before optimization.
+...
+FROM dbo.WW_Line_Segment_Listing AS b 
+LEFT JOIN (
+    SELECT MAX(Inspection_Date) AS InspectionDate, UNIQUE_ID
+    FROM PWM_ITPipes.dbo.View_ITPipes_MLI
+    GROUP BY UNIQUE_ID
+) c ON b.UNIQUE_ID = c.UNIQUE_ID
+...</code></pre>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="headingTwoModal">
+                    <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoModal" aria-expanded="false" aria-controls="collapseTwoModal">
+                        Phase 2: Data Modeling and Index Optimization (The Fix)
+                    </button>
+                </h2>
+                <div id="collapseTwoModal" class="accordion-collapse collapse" aria-labelledby="headingTwoModal" data-bs-parent="#processAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>We implemented a revised indexing strategy, prioritizing Clustered Columnstore Indexes on large, fact-based tables to improve I/O efficiency. We also refactored the two identified bottleneck queries, replacing subqueries with highly-optimized Common Table Expressions (CTEs).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="headingThreeModal">
+                    <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeModal" aria-expanded="false" aria-controls="collapseThreeModal">
+                        Phase 3: UAT and Performance Validation
+                    </button>
+                </h2>
+                <div id="collapseThreeModal" class="accordion-collapse collapse" aria-labelledby="headingThreeModal" data-bs-parent="#processAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>The solution was deployed in a staging environment for User Acceptance Testing (UAT) with 50 concurrent users. Post-deployment, we utilized SQL Server's Query Store to monitor performance. The data confirmed a significant reduction in CPU utilization and I/O for the targeted queries, validating the success of the re-architecture.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+        
+        <h3 class="mt-5 mb-4 text-white">Quantifiable Results</h3>
+        <div class="row text-center text-light">
+            <div class="col-md-4 mb-3"><i class="bi bi-speedometer2 display-4 text-success"></i><h3 class="mt-2 text-success">+50%</h3><p class="text-light">Faster Application Performance</p></div>
+            <div class="col-md-4 mb-3"><i class="bi bi-cpu display-4 text-primary"></i><h3 class="mt-2 text-primary">-20%</h3><p class="text-light">Reduction in Server CPU Utilization</p></div>
+            <div class="col-md-4 mb-3"><i class="bi bi-graph-up display-4 text-info"></i> <h3 class="mt-2 text-info">0</h3><p class="text-light">High-Priority Data Integrity Alerts Post-Deployment</p></div>
+        </div>
+        
+        <h3 class="mt-5 mb-3 text-white">Key Takeaway</h3>
+        <p class="alert alert-dark border-secondary text-white shadow-lg">The biggest lesson was the value of focusing on clustered index architecture before looking at costly hardware upgrades. Smart re-architecture negated the need for a $10,000 server purchase, proving that database design is the first line of defense against latency.</p>
+
+    </div>
+    
+    <div class="modal-footer bg-black border-top border-secondary">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Case Study</button>
+    </div>
+</div>

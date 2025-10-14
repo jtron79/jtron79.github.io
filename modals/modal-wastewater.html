@@ -1,0 +1,86 @@
+<div class="modal-content bg-dark text-light border border-secondary shadow-lg">
+            
+    <div class="modal-header bg-black text-white border-bottom border-secondary">
+        <h5 class="modal-title" id="wastewaterModalLabel"><span class="text-primary">💧</span> Wastewater Defect Scoring Engine</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    <div class="modal-body p-4 bg-dark">
+        
+        <div class="text-center p-3 mb-4 rounded border border-primary bg-secondary-darker"> 
+            <h1 class="display-5 fw-bold text-primary">Proactive Infrastructure Risk Assessment</h1>
+            <p class="lead text-light">Developed a complex SQL-based scoring engine to rate wastewater infrastructure, enabling proactive maintenance through data-driven GIS visualizations.</p>
+            <hr class="my-3 border-light opacity-25"> 
+            <span class="badge bg-success me-2">SQL</span>
+            <span class="badge bg-info me-2">GIS / Mapping</span>
+            <span class="badge bg-secondary me-2">Systems Integration</span>
+            <span class="badge bg-secondary me-2">Data Modeling</span>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <h4 class="text-danger border-bottom border-danger pb-2">The Problem</h4>
+                <ul class="list-unstyled text-light">
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Maintenance was purely reactive, addressing pipe failures only after they occurred.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> There was no quantitative method to assess city-wide pipe conditions or identify high-risk segments.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Capital improvement planning lacked the data needed for effective budget allocation.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-primary border-bottom border-primary pb-2">The Solution</h4>
+                <p class="text-light">Engineered a sophisticated scoring engine entirely within SQL. This system translated complex engineering principles—factoring in pipe age, material, and observed defects—into a quantifiable risk score. The resulting data was then integrated with GIS to produce an intuitive, color-coded map of the entire wastewater system.</p>
+            </div>
+        </div>
+        
+        <h3 class="mb-3 text-white">The Process: From Engineering Logic to Visual Intelligence</h3>
+        <div class="accordion" id="wastewaterAccordionModal">
+            
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="wwHeadingOne">
+                    <button class="accordion-button bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#wwCollapseOne" aria-expanded="true" aria-controls="wwCollapseOne">
+                        Phase 1: Engineering-Based Scoring Model
+                    </button>
+                </h2>
+                <div id="wwCollapseOne" class="accordion-collapse collapse show" aria-labelledby="wwHeadingOne" data-bs-parent="#wastewaterAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>The project's foundation was built on domain-specific engineering knowledge. I developed a weighted scoring matrix that assigned values based on pipe material (e.g., Vitrified Clay vs. PVC), age, and known failure modes. This created a robust, logic-based framework before a single line of SQL was written.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="wwHeadingTwo">
+                    <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#wwCollapseTwo" aria-expanded="false" aria-controls="wwCollapseTwo">
+                        Phase 2: Complex SQL Implementation
+                    </button>
+                </h2>
+                <div id="wwCollapseTwo" class="accordion-collapse collapse" aria-labelledby="wwHeadingTwo" data-bs-parent="#wastewaterAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>The scoring matrix was translated into a series of complex SQL queries using Common Table Expressions (CTEs) and CASE statements. This engine processed thousands of pipe segments, calculated their individual defect scores, and stored the final ratings in a new, indexed SQL table, ready for system integration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="wwHeadingThree">
+                    <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#wwCollapseThree" aria-expanded="false" aria-controls="wwCollapseThree">
+                        Phase 3: GIS Integration and Visualization
+                    </button>
+                </h2>
+                <div id="wwCollapseThree" class="accordion-collapse collapse" aria-labelledby="wwHeadingThree" data-bs-parent="#wastewaterAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>The final step was to join the new SQL scoring table with the existing GIS spatial data. I configured the map service to apply a color-gradient symbology based on the defect score, instantly transforming raw data into a powerful visual tool for planners and field crews. High-risk pipes appeared in red, allowing for immediate identification and proactive action.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h3 class="mt-5 mb-3 text-white">Key Takeaway</h3>
+        <p class="alert border-secondary text-white shadow-lg" style="background-color: #343a40 !important;">This project is a testament to the power of bridging specialized domain knowledge with technical expertise. By translating complex engineering principles into an automated SQL and GIS workflow, we transformed a reactive maintenance process into a proactive, data-driven strategy.</p>
+
+    </div>
+    
+    <div class="modal-footer bg-black border-top border-secondary">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Case Study</button>
+    </div>
+</div>

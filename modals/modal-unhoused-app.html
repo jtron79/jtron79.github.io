@@ -1,0 +1,86 @@
+<div class="modal-content bg-dark text-light border border-secondary shadow-lg">
+            
+    <div class="modal-header bg-black text-white border-bottom border-secondary">
+        <h5 class="modal-title" id="unhousedAppModalLabel"><span class="text-info">🤝</span> Unhoused Outreach Dashboard</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    <div class="modal-body p-4 bg-dark">
+        
+        <div class="text-center p-3 mb-4 rounded border border-info bg-secondary-darker"> 
+            <h1 class="display-5 fw-bold text-info">Centralized Platform for Community Outreach</h1>
+            <p class="lead text-light">Developed a full-stack .NET application to centralize data, streamline outreach efforts, and provide comprehensive reporting on services for the unhoused population.</p>
+            <hr class="my-3 border-light opacity-25"> 
+            <span class="badge bg-primary me-2">.NET / C#</span>
+            <span class="badge bg-info me-2">GIS / Mapping</span>
+            <span class="badge bg-secondary me-2">Reporting</span>
+            <span class="badge bg-secondary me-2">Project Management</span>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <h4 class="text-danger border-bottom border-danger pb-2">The Problem</h4>
+                <ul class="list-unstyled text-light">
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Critical data was siloed within a centralized work order management system, preventing effective collaboration between different outreach teams.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Outreach teams lacked real-time information on individual needs, service history, or last known locations.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Reporting to stakeholders was a manual, time-consuming process with a high risk of data inaccuracy.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-primary border-bottom border-primary pb-2">The Solution</h4>
+                <p class="text-light">A secure, centralized .NET web application providing a single source of truth. The platform featured role-based access for different agencies, an integrated GIS component to visualize client locations, and a project management module to track outreach tasks and resource allocation.</p>
+            </div>
+        </div>
+        
+        <h3 class="mb-3 text-white">The Process: A Multi-faceted Approach</h3>
+        <div class="accordion" id="unhousedAccordionModal">
+            
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="unhousedHeadingOne">
+                    <button class="accordion-button bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#unhousedCollapseOne" aria-expanded="true" aria-controls="unhousedCollapseOne">
+                        Phase 1: Full-Stack .NET Architecture
+                    </button>
+                </h2>
+                <div id="unhousedCollapseOne" class="accordion-collapse collapse show" aria-labelledby="unhousedHeadingOne" data-bs-parent="#unhousedAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>The application was built using ASP.NET Core for the backend API and a responsive front-end. The data layer was built on a SQL Server database with carefully designed tables. Custom ETL processes were crafted to summarize and import data from various sources into the correct, standardized structures, ensuring data integrity and performance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="unhousedHeadingTwo">
+                    <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#unhousedCollapseTwo" aria-expanded="false" aria-controls="unhousedCollapseTwo">
+                        Phase 2: GIS and Reporting Integration
+                    </button>
+                </h2>
+                <div id="unhousedCollapseTwo" class="accordion-collapse collapse" aria-labelledby="unhousedHeadingTwo" data-bs-parent="#unhousedAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>We integrated with ArcGIS services to provide a live map view of client check-ins and known encampment locations, giving outreach teams critical spatial awareness. For reporting, we developed a custom dashboard using D3.js to create dynamic, interactive graphs. These visualizations were powered by optimized, custom-written SQL queries to provide on-demand insights for city officials and funding partners.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="unhousedHeadingThree">
+                    <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#unhousedCollapseThree" aria-expanded="false" aria-controls="unhousedCollapseThree">
+                        Phase 3: Project Management Module
+                    </button>
+                </h2>
+                <div id="unhousedCollapseThree" class="accordion-collapse collapse" aria-labelledby="unhousedHeadingThree" data-bs-parent="#unhousedAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>A custom project management module was developed to allow team leaders to create tasks (e.g., "Welfare Check," "Supply Drop"), assign them to outreach workers, and track their status in real-time. This feature replaced a chaotic system of emails and phone calls, dramatically improving operational efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h3 class="mt-5 mb-3 text-white">Key Takeaway</h3>
+        <p class="alert border-secondary text-white shadow-lg" style="background-color: #343a40 !important;">This project highlighted the power of technology to drive social impact. By integrating disparate systems into a single, user-friendly platform, we enabled a more efficient, data-driven, and compassionate response to a critical community issue.</p>
+
+    </div>
+    
+    <div class="modal-footer bg-black border-top border-secondary">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Case Study</button>
+    </div>
+</div>

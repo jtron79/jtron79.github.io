@@ -30,4 +30,38 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // --- Dynamic Modal Loading ---
+    const projectModal = document.getElementById('projectModal');
+    if (projectModal) {
+        projectModal.addEventListener('show.bs.modal', async (event) => {
+            // Button that triggered the modal
+            const button = event.relatedTarget;
+            // Get the URL from the data-modal-url attribute
+            const modalUrl = button.getAttribute('data-modal-url');            
+            const modalDialog = projectModal.querySelector('.modal-dialog');
+
+            // Find the image URL from the card that was clicked
+            const card = button.closest('.card');
+            const img = card ? card.querySelector('.card-img-top') : null;
+            const imageUrl = img ? img.src : '';
+
+            // Show a simple loading state
+            modalDialog.innerHTML = '<div class="modal-content bg-dark text-light p-5 text-center"><div class="spinner-border text-light" role="status"><span class="visually-hidden">Loading...</span></div></div>';
+
+            try {
+                const response = await fetch(modalUrl);
+                const modalContent = await response.text();
+                modalDialog.innerHTML = modalContent;
+
+                // Apply the background image to the new modal header
+                const modalHeader = modalDialog.querySelector('.modal-header');
+                if (modalHeader && imageUrl) {
+                    modalHeader.style.backgroundImage = `url('${imageUrl}')`;
+                }
+            } catch (error) {
+                modalDialog.innerHTML = '<div class="modal-content bg-dark text-light p-5 text-center"><p class="text-danger">Error: Could not load case study.</p></div>';
+            }
+        });
+    }
 });

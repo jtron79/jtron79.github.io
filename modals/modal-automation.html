@@ -1,0 +1,89 @@
+<div class="modal-content bg-dark text-light border border-secondary shadow-lg">
+            
+    <div class="modal-header bg-black text-white border-bottom border-secondary">
+        <h5 class="modal-title" id="automationModalLabel"><span class="text-warning">⏱️</span> Automated Security Patching</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    <div class="modal-body p-4 bg-dark">
+        
+        <div class="text-center p-3 mb-4 rounded border border-warning bg-secondary-darker"> 
+            <h1 class="display-5 fw-bold text-warning">Reclaimed Team Hours</h1>
+            <p class="lead text-light">Engineered an Ansible-based solution to automate patching for a private Linux cloud, eliminating manual updates and hardening the infrastructure.</p>
+            <hr class="my-3 border-light opacity-25"> 
+            <span class="badge bg-primary me-2">Automation (Ansible)</span>
+            <span class="badge bg-secondary me-2">Process Improvement</span>
+            <span class="badge bg-info me-2">Security</span>
+            <span class="badge bg-info">IT Infrastructure Management</span>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <h4 class="text-danger border-bottom border-danger pb-2">The Problem</h4>
+                <ul class="list-unstyled text-light">
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Manual patching of OS packages (e.g., kernel, OpenSSL) across all nodes was time-consuming and error-prone.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Update delays left nodes and containers vulnerable to common exploits (CVEs).</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Inconsistent patching led to compliance and audit risks.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-primary border-bottom border-primary pb-2">The Solution</h4>
+                <p class="text-light">Developed a set of idempotent Ansible playbooks, managed in a Git repository, to automate the patching of OS packages and container base images across the entire private cloud infrastructure, ensuring rapid and consistent security coverage.</p>
+            </div>
+        </div>
+        
+        <h3 class="mb-3 text-white">The Process: Scripting and Implementation</h3>
+        <div class="accordion" id="automationAccordionModal">
+            
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="autoHeadingOne">
+                    <button class="accordion-button bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#autoCollapseOne" aria-expanded="true" aria-controls="autoCollapseOne">
+                        Phase 1: Developing Idempotent Ansible Playbooks
+                    </button>
+                </h2>
+                <div id="autoCollapseOne" class="accordion-collapse collapse show" aria-labelledby="autoHeadingOne" data-bs-parent="#automationAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>The core of the solution involved creating Ansible playbooks using modules like `apt` and `yum` to handle package management. The playbooks were designed to be idempotent, meaning they could be run multiple times without changing the system's state after the initial successful run. An inventory file defined the target nodes, grouped by role (e.g., web, database).</p>
+                        <h6 class="mt-3 text-white">Concept: Example Playbook Task</h6>
+                        <pre><code class="language-yaml bg-black p-2 rounded d-block text-white">
+- name: Update all packages on Debian/Ubuntu servers
+  ansible.builtin.apt:
+    name: "*"
+    state: latest
+    update_cache: yes
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="autoHeadingTwo">
+                    <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#autoCollapseTwo" aria-expanded="false" aria-controls="autoCollapseTwo">
+                        Phase 2: CI/CD Integration and Scheduled Execution
+                    </button>
+                </h2>
+                <div id="autoCollapseTwo" class="accordion-collapse collapse" aria-labelledby="autoHeadingTwo" data-bs-parent="#automationAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>The playbooks were integrated into a CI/CD pipeline (e.g., Jenkins, GitLab CI) that triggered on a schedule. Ansible's logging capabilities were used to capture the output of each run, providing a clear audit trail. This automated workflow ensured that all nodes and containers received security updates consistently and without manual intervention.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <h3 class="mt-5 mb-4 text-white">Quantifiable Results</h3>
+        <div class="row text-center text-light">
+            <div class="col-md-4 mb-3"><i class="bi bi-clock-history display-4 text-warning"></i><h3 class="mt-2 text-warning">~40 Hrs/Mo</h3><p class="text-light">IT Staff Time Reclaimed from Manual Patching</p></div>
+            <div class="col-md-4 mb-3"><i class="bi bi-shield-lock-fill display-4 text-success"></i><h3 class="mt-2 text-success">95% Faster</h3><p class="text-light">Patch Deployment Time</p></div>
+            <div class="col-md-4 mb-3"><i class="bi bi-code-square display-4 text-info"></i><h3 class="mt-2 text-info">Ansible</h3><p class="text-light">Primary Technology Utilized</p></div>
+        </div>
+        
+        <h3 class="mt-5 mb-3 text-white">Key Takeaway</h3>
+        <p class="alert border-secondary text-white shadow-lg" style="background-color: #343a40 !important;">This project reinforced the power of Infrastructure as Code (IaC). By treating our patching process as code with Ansible, we created a repeatable, auditable, and highly efficient system that eliminated human error and significantly improved the security posture of the entire cloud environment.</p>
+
+    </div>
+    
+    <div class="modal-footer bg-black border-top border-secondary">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Case Study</button>
+    </div>
+</div>

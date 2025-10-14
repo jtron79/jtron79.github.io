@@ -1,0 +1,94 @@
+<div class="modal-content bg-dark text-light border border-secondary shadow-lg">
+            
+    <div class="modal-header bg-black text-white border-bottom border-secondary">
+        <h5 class="modal-title" id="gisModalLabel"><span class="text-info">🗺️</span> GIS Data Model Transformation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    <div class="modal-body p-4 bg-dark">
+        
+        <div class="text-center p-3 mb-4 rounded border border-info bg-secondary-darker"> 
+            <h1 class="display-5 fw-bold text-info">First-Time Infrastructure Mapping</h1>
+            <p class="lead text-light">Engineered a configurable C# service to ETL data from any ArcGIS map service into a standardized SQL database, enabling cross-asset indexing and reporting.</p>
+            <hr class="my-3 border-light opacity-25"> 
+            <span class="badge bg-primary me-2">C#</span>
+            <span class="badge bg-danger me-2">Azure Functions</span>
+            <span class="badge bg-success me-2">SQL Server</span>
+            <span class="badge bg-secondary me-2">Data Modeling</span>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <h4 class="text-danger border-bottom border-danger pb-2">The Problem</h4>
+                <ul class="list-unstyled text-light">
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Disparate ArcGIS map services for different assets (streets, signs, stormwater) lacked a common data structure.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Many assets across different systems lacked stable, unique IDs, making it impossible to associate work orders or inspections reliably.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Inability to perform cross-asset analysis or reporting due to siloed and non-standardized data.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-primary border-bottom border-primary pb-2">The Solution</h4>
+                <p class="text-light">Developed a configurable C# ETL service that connects to any specified ArcGIS map service endpoint. The service extracts features, generates unique IDs where missing, transforms the data into a standardized schema, and loads it into a central SQL database, creating a unified data layer for all city infrastructure assets.</p>
+            </div>
+        </div>
+        
+        <h3 class="mb-3 text-white">The Process: Data Restructuring and Integration</h3>
+        <div class="accordion" id="gisAccordionModal">
+            
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="gisHeadingOne">
+                    <button class="accordion-button bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#gisCollapseOne" aria-expanded="true" aria-controls="gisCollapseOne">
+                        Phase 1: Configurable ETL Service Architecture
+                    </button>
+                </h2>
+                <div id="gisCollapseOne" class="accordion-collapse collapse show" aria-labelledby="gisHeadingOne" data-bs-parent="#gisAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>The service was built as a C# Azure Function, allowing for a serverless, scalable, and cost-effective design. Configuration was stored in a database and managed via Azure App Settings, not a static file. This allowed administrators to map fields from new ArcGIS services to the standardized SQL table schema without requiring a code deployment, enabling new asset types (like street lights or signs) to be integrated dynamically.</p>
+                        <h6 class="mt-3 text-white">Code Concept: Dynamic Feature Processing</h6>
+                        <pre><code class="language-csharp bg-black p-2 rounded d-block text-white">
+// Conceptual C# logic for processing features from any service
+public async Task ProcessFeatureLayer(LayerConfiguration config)
+{
+    var features = await _arcGisClient.GetFeaturesAsync(config.ServiceUrl);
+    foreach (var feature in features)
+    {
+        var standardizedAsset = _mapper.MapToStandardSchema(feature, config.FieldMappings);
+        await _assetRepository.UpsertAsync(standardizedAsset);
+    }
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                        <h2 class="accordion-header" id="gisHeadingTwo">
+                            <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#gisCollapseTwo" aria-expanded="false" aria-controls="gisCollapseTwo">
+                                Phase 2: Data Standardization and Business Impact
+                            </button>
+                        </h2>
+                        <div id="gisCollapseTwo" class="accordion-collapse collapse" aria-labelledby="gisHeadingTwo" data-bs-parent="#gisAccordionModal">
+                            <div class="accordion-body bg-dark text-light">
+                                <p>By creating a single source of truth in a standardized SQL table, the project enabled a new class of applications and reports. For the first time, work orders could be reliably associated with specific assets, regardless of type. This provided accurate lifecycle costing and improved maintenance planning across all of Public Works, from stormwater infrastructure to street signs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <h3 class="mt-5 mb-4 text-white">Quantifiable Results</h3>
+                <div class="row text-center text-light">
+                    <div class="col-md-4 mb-3"><i class="bi bi-diagram-3-fill display-4 text-info"></i><h3 class="mt-2 text-info">Unified</h3><p class="text-light">Data Model for All Assets</p></div>
+                    <div class="col-md-4 mb-3"><i class="bi bi-file-earmark-code-fill display-4 text-primary"></i><h3 class="mt-2 text-primary">C# ETL</h3><p class="text-light">Primary Transformation Service</p></div>
+                    <div class="col-md-4 mb-3"><i class="bi bi-link-45deg display-4 text-success"></i><h3 class="mt-2 text-success">Reliable</h3><p class="text-light">Work-to-Asset Association</p></div>
+                </div>
+                
+                <h3 class="mt-5 mb-3 text-white">Key Takeaway</h3>
+                <p class="alert border-secondary text-white shadow-lg" style="background-color: #343a40 !important;">This project demonstrated the immense value of breaking down data silos. By creating a configurable ETL service, we built a foundational data platform that not only solved the immediate problem but also provided a scalable framework for future data integration projects across the organization.</p>
+
+            </div>
+            
+            <div class="modal-footer bg-black border-top border-secondary">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Case Study</button>
+            </div>
+        </div>
