@@ -64,4 +64,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    /**
+     * Secure Mailto Link
+     * ------------------
+     * Prevents email crawlers from scraping the email address by constructing
+     * the mailto link dynamically with JavaScript on user click.
+     */
+    const emailBtn = document.getElementById('contact-email-btn');
+    if (emailBtn) {
+        emailBtn.addEventListener('click', function() {
+            // --- Replace with your email details ---
+            const user = 'jtron79';
+            const domain = 'gmail.com';
+            // -----------------------------------------
+
+            // This opens the user's default email client
+            window.location.href = `mailto:${user}@${domain}`;
+        });
+    }
 });

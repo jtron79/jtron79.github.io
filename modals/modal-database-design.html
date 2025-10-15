@@ -1,0 +1,116 @@
+<div class="modal-content bg-dark text-light border border-secondary shadow-lg">
+            
+    <div class="modal-header bg-black text-white border-bottom border-secondary">
+        <h5 class="modal-title" id="databaseDesignModalLabel"><span class="text-success">💾</span> Robust Database Design & Backend Rewrite</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    <div class="modal-body p-4 bg-dark">
+        
+        <div class="text-center p-3 mb-4 rounded border border-success bg-secondary-darker"> 
+            <h1 class="display-5 fw-bold text-success">Foundational Backend Re-architecture</h1>
+            <p class="lead text-light">Led the complete backend rewrite of a legacy application, focusing on meticulous SQL database design, robust indexing, and clear primary/foreign key relationships to ensure data integrity and scalability.</p>
+            <hr class="my-3 border-light opacity-25"> 
+            <span class="badge bg-success me-2">SQL Server</span>
+            <span class="badge bg-primary me-2">.NET / C#</span>
+            <span class="badge bg-secondary me-2">Database Design</span>
+            <span class="badge bg-secondary me-2">Backend Development</span>
+            <span class="badge bg-info me-2">Data Modeling</span>
+            <span class="badge bg-danger me-2">Full-Stack Development</span>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <h4 class="text-danger border-bottom border-danger pb-2">The Problem</h4>
+                <ul class="list-unstyled text-light">
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Legacy application suffered from severe performance bottlenecks due to a poorly designed, unindexed database.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> Lack of proper primary/foreign key constraints led to rampant data inconsistencies and integrity issues.</li>
+                    <li><i class="bi bi-x-circle-fill text-danger me-2"></i> The existing backend was tightly coupled with the database, making maintenance, feature development, and scaling extremely difficult.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-primary border-bottom border-primary pb-2">The Solution</h4>
+                <p class="text-light">Executed a comprehensive backend rewrite, starting with a ground-up redesign of the SQL database. This involved creating a normalized schema with explicit primary and foreign key relationships, strategic indexing, and a new, decoupled API layer to ensure high performance, data integrity, and future scalability.</p>
+            </div>
+        </div>
+        
+        <!-- Project Output Image - Placeholder -->
+        <div class="text-center my-4">
+            <figure class="figure">
+                <img src="content/database_design-overall.jpg" class="figure-img img-fluid rounded shadow-lg border border-secondary" alt="A conceptual diagram showing a well-designed relational database schema with tables, primary keys, and foreign key relationships.">
+                <figcaption class="figure-caption text-light mt-2">Conceptual diagram of the new, normalized database schema with clear relationships.</figcaption>
+            </figure>
+        </div>
+
+        <h3 class="mb-3 text-white">The Process: From Blueprint to Production</h3>
+        <div class="accordion" id="databaseDesignAccordionModal">
+            
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="dbdHeadingOne">
+                    <button class="accordion-button bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dbdCollapseOne" aria-expanded="true" aria-controls="dbdCollapseOne">
+                        Phase 1: Comprehensive Data Modeling & Schema Design
+                    </button>
+                </h2>
+                <div id="dbdCollapseOne" class="accordion-collapse collapse show" aria-labelledby="dbdHeadingOne" data-bs-parent="#databaseDesignAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>Began with extensive requirements gathering and analysis of the legacy system's data flow. Developed detailed Entity-Relationship Diagrams (ERDs) and a normalized schema (up to 3NF) to eliminate redundancy and ensure data integrity. This blueprint guided the entire database construction, ensuring every table, column, and relationship served a clear purpose.</p>
+                        <h6 class="mt-3 text-white">Code Concept: Example DDL for a Core Table</h6>
+                        <pre><code class="language-sql bg-black p-2 rounded d-block text-white">
+CREATE TABLE [dbo].[Customers] (
+    [CustomerId] INT IDENTITY(1,1) NOT NULL,
+    [FirstName] NVARCHAR(50) NOT NULL,
+    [LastName] NVARCHAR(50) NOT NULL,
+    [Email] NVARCHAR(255) NOT NULL UNIQUE,
+    [DateCreated] DATETIME2(7) DEFAULT GETDATE() NOT NULL,
+    CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED ([CustomerId] ASC)
+);
+
+CREATE INDEX IX_Customers_Email ON [dbo].[Customers] (Email);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="dbdHeadingTwo">
+                    <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dbdCollapseTwo" aria-expanded="false" aria-controls="dbdCollapseTwo">
+                        Phase 2: Database Implementation & Performance Tuning
+                    </button>
+                </h2>
+                <div id="dbdCollapseTwo" class="accordion-collapse collapse" aria-labelledby="dbdHeadingTwo" data-bs-parent="#databaseDesignAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>Translated the ERDs into SQL Data Definition Language (DDL) scripts, creating tables, primary keys, foreign keys with appropriate cascade rules, and check constraints. Implemented a strategic indexing strategy based on anticipated query patterns and performance profiling. Developed optimized stored procedures and views to encapsulate business logic and improve data access efficiency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-darker text-light border-secondary">
+                <h2 class="accordion-header" id="dbdHeadingThree">
+                    <button class="accordion-button collapsed bg-secondary-subtle text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dbdCollapseThree" aria-expanded="false" aria-controls="dbdCollapseThree">
+                        Phase 3: Backend API Development & Integration
+                    </button>
+                </h2>
+                <div id="dbdCollapseThree" class="accordion-collapse collapse" aria-labelledby="dbdHeadingThree" data-bs-parent="#databaseDesignAccordionModal">
+                    <div class="accordion-body bg-dark text-light">
+                        <p>Built a new, RESTful backend API (e.g., using ASP.NET Core) designed to interact exclusively with the newly structured database. This decoupled architecture improved maintainability, testability, and allowed for independent scaling of the API and database layers. Implemented robust data access patterns (e.g., Repository/Unit of Work) and integrated with ORMs (e.g., Entity Framework Core) for efficient data manipulation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h3 class="mt-5 mb-4 text-white">Quantifiable Results</h3>
+        <div class="row text-center text-light">
+            <div class="col-md-4 mb-3"><i class="bi bi-speedometer2 display-4 text-success"></i><h3 class="mt-2 text-success">~70%</h3><p class="text-light">Average Query Performance Improvement</p></div>
+            <div class="col-md-4 mb-3"><i class="bi bi-shield-check display-4 text-primary"></i><h3 class="mt-2 text-primary">Zero</h3><p class="text-light">Critical Data Integrity Issues Post-Launch</p></div>
+            <div class="col-md-4 mb-3"><i class="bi bi-arrow-repeat display-4 text-info"></i> <h3 class="mt-2 text-info">Simplified</h3><p class="text-light">Maintenance & Feature Development</p></div>
+        </div>
+        
+        <h3 class="mt-5 mb-3 text-white">Key Takeaway</h3>
+        <p class="alert border-secondary text-white shadow-lg" style="background-color: #343a40 !important;">A well-designed database is the backbone of any high-performing and scalable application. Investing time in meticulous data modeling and implementing proper relational integrity from the outset drastically reduces technical debt and accelerates future development.</p>
+
+    </div>
+    
+    <div class="modal-footer bg-black border-top border-secondary">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Case Study</button>
+    </div>
+</div>

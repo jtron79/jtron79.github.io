@@ -77,6 +77,31 @@ This practical foundation is backed by key certifications in both information te
         <!-- Project Cards Grid (All 3 cards included) -->
         <div class="row row-cols-1 row-cols-md-3 g-4 proj-marg"> 
             
+            <!-- Card 6: Database Design & Backend Rewrite -->
+            <div class="col">
+                <div class="card h-100 shadow bg-dark text-white border-0">
+                    <img src="content/database_design.jpg" class="card-img-top" alt="Conceptual diagram of a well-designed relational database schema.">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title text-center text-success fs-5">💾 Database Design & Backend Rewrite</h3>
+                        <p class="card-text text-center text-light">Led a complete backend re-architecture, focusing on robust SQL database design, indexing, and PK/FK relationships for a legacy application.</p>
+                        <div class="text-center mt-2 mb-3">
+                            <span class="badge bg-success me-1">SQL Server</span>
+                            <span class="badge bg-primary me-1">.NET / C#</span>
+                            <span class="badge bg-secondary me-1">Database Design</span>
+                            <span class="badge bg-secondary me-1">Backend Development</span>
+                            <span class="badge bg-info me-1">Data Modeling</span>
+                            <span class="badge bg-danger me-1">Full-Stack Development</span>
+                        </div>
+                        <div class="mt-auto d-grid">
+                            <button type="button" class="btn btn-dark border border-white" data-bs-toggle="modal" 
+                                data-bs-target="#projectModal" data-modal-url="modals/modal-database-design.html">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Card 1: Performance Overhaul -->
             <div class="col">
                 <div class="card h-100 shadow bg-dark text-white border-0">
@@ -87,7 +112,7 @@ This practical foundation is backed by key certifications in both information te
                         <div class="text-center mt-2 mb-3">
                             <span class="badge bg-success me-1">SQL Server</span>
                             <span class="badge bg-secondary me-1">System Integration</span>
-                            <span class="badge bg-secondary me-1">Database Migration</span>
+                            <span class="badge bg-secondary me-1">Database Tuning</span>
                             <span class="badge bg-danger me-1">Full-Stack Development</span>
                         </div>
                         <div class="mt-auto d-grid">
@@ -132,7 +157,7 @@ This practical foundation is backed by key certifications in both information te
                         <p class="card-text text-center text-light">Engineered a C# Azure Function to transform complex SQL data, enabling first-time infrastructure mapping for Public Works.</p>
                         <div class="text-center mt-2 mb-3">
                             <span class="badge bg-primary me-1">C#</span>
-                            <span class="badge bg-primary me-1">Azure Functions</span>
+                            <span class="badge bg-danger me-1">Azure Functions</span>
                             <span class="badge bg-success me-1">SQL</span>
                             <span class="badge bg-secondary me-1">Data Modeling</span>
                         </div>
@@ -239,12 +264,33 @@ This practical foundation is backed by key certifications in both information te
     </div>
     <!-- END SKILLS SECTION: FULL-WIDTH ANCHOR -->
 </section>
-    <!-- Footer (Contact Section) -->
-    <footer id="contact" class="hidden">
-        <div class="container">
-            <p>&copy; 2023 Jason Lamb. All rights reserved.</p>
+
+<!-- Contact Section -->
+<section id="contact" class="hidden text-center">
+    <div class="container py-5">
+        <h2 class="mb-4 text-white">Get In Touch</h2>
+        <p class="lead mb-5 mx-auto" style="max-width: 600px;">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious team. Feel free to reach out.</p>
+        <div class="d-flex justify-content-center gap-4">
+            <button id="contact-email-btn" class="btn btn-lg btn-outline-primary d-inline-flex align-items-center">
+                <i class="bi bi-envelope-fill me-2"></i> Email Me
+            </button>
+            <a href="https://www.linkedin.com/in/jason-lamb-technology" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-outline-info d-inline-flex align-items-center">
+                <i class="bi bi-linkedin me-2"></i> LinkedIn
+            </a>
+            <a href="https://github.com/jtron79" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-outline-light d-inline-flex align-items-center">
+                <i class="bi bi-github me-2"></i> GitHub
+            </a>
         </div>
-    </footer>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-center text-secondary py-4">
+    <div class="container">
+        <p class="mb-0">&copy; 2024 Jason Lamb. All rights reserved.</p>
+    </div>
+</footer>
+
 <!-- 
     Generic Modal Placeholder.
     The content for this modal is loaded dynamically from the partial HTML files.
