@@ -31,7 +31,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1030; /* Ensure it's above Bootstrap modals */
     padding: 1rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -76,8 +76,8 @@ header {
 
 section {
     /* Increased top padding to push content below the fixed header */
-    padding: 150px 1rem 5rem 1rem;
-    min-height: 100vh;
+    padding: 185px 1rem 5rem 1rem; /* Adjusted padding to better match header height */
+    min-height: 100vh; /* Ensure section fills the viewport */
 }
 
 /* 
@@ -139,10 +139,34 @@ h2 {
 
 .about-content img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+   
     object-fit: cover;
 }
+
+/* Specific style for the photo in the 'About Me' section */
+.about-me-photo {
+    float: right;
+   
+    max-width: 450px;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments for 'About Me' section on smaller screens */
+@media (max-width: 768px) {
+    /* Reset the floated photo to be a block element on mobile */
+    .about-me-photo {
+        float: none; /* Remove the float */
+        display: block;
+        width: 100%; /* Take up the full width of the container */
+        max-width: 100%; /* Ensure it doesn't overflow */
+        margin-left: auto; /* Center the block */
+        margin-right: auto; /* Center the block */
+        margin-bottom: 1.5rem; /* Add space below the image */
+    }
+}
+
 
 .projects-grid {
     display: grid;
@@ -234,8 +258,11 @@ footer {
 .hero-logo-float {
     float: left;
     width: 200px;
+    height: 200px; /* Ensure the container is square for a perfect circle */
     margin-right: 30px;
     margin-bottom: 15px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Prevents the image from being distorted */
 }
 
 /* This contains the float and fixes the layout for everything after it */
@@ -243,6 +270,19 @@ footer {
     content: "";
     display: table;
     clear: both;
+}
+
+/* Responsive adjustments for Hero section on smaller screens */
+@media (max-width: 768px) {
+    .hero-logo-float {
+        float: none; /* Remove the float */
+        display: block;
+        margin: 0 auto 1.5rem; /* Center the image and add space below */
+    }
+
+    .hero h1, .hero .lead, .hero .btn {
+        text-align: center; /* Center the heading, lead paragraph, and button */
+    }
 }
 .hero .lead {
     /* This establishes a new layout context, forcing the paragraph 
@@ -253,13 +293,35 @@ footer {
 .hero {
     /* Pushes the content down from under the nav bar */
     /* Adjust this value to match your nav bar's height */
-    padding-top: 150px; 
+    padding-top: 150px;
+    position: relative;
+    background-image: url('content/mtn-top.jpeg'); /* <-- REPLACE WITH YOUR IMAGE PATH */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates a parallax effect on scroll */
+    color: #ffffff; /* Ensure text is white against the new background */
 }
 .proj-marg {
     
     margin-top: 0 !important;
 
 }
+
+/* Add a pseudo-element for the dark overlay to ensure text is readable */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)); /* Dark overlay */
+    z-index: 1; /* Place overlay below the text */
+}
+
+/* Ensure hero content is on top of the overlay */
+.hero > .container {
+    position: relative;
+    z-index: 2;
+}
+
 /* --- FIX 1: Ensure Accordion Item has a proper dark background and border --- */
 .accordion-item {
     background-color: #1a1a1a !important; /* A very dark gray for subtle lift */

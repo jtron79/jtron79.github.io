@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navTabs.forEach(t => t.classList.remove('active-tab'));
             tab.classList.add('active-tab');
 
+            // Scroll the window to the top to show the start of the new section
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
