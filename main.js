@@ -58,7 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Apply the background image to the new modal header
                 const modalHeader = modalDialog.querySelector('.modal-header');
                 if (modalHeader && imageUrl) {
-                    modalHeader.style.backgroundImage = `url('${imageUrl}')`;
+                    // Create a URL object to easily get the pathname
+                    const url = new URL(imageUrl);
+                    // Use the pathname to create a root-relative path for the background image
+                    // This prevents issues with base URLs and ensures the path is correct.
+                    modalHeader.style.backgroundImage = `url('${url.pathname}')`;
                 }
             } catch (error) {
                 modalDialog.innerHTML = '<div class="modal-content bg-dark text-light p-5 text-center"><p class="text-danger">Error: Could not load case study.</p></div>';
